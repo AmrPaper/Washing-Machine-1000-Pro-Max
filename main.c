@@ -69,7 +69,7 @@ void gpio_init(void) {
 	GPIOB->PUPDR |=  (2 << (2 * 2));       // Set pull-down on PB2
 
 	GPIOA->PUPDR &= ~(3 << (2 * 8));       // Clear PUPDR2
-	GPIOA->PUPDR |=  (2 << (2 * 8));       // Set pull-down on PB2
+	GPIOA->PUPDR |=  (2 << (2 * 8));       // Set pull-down on PA8
 
 	SYSCFG->EXTICR[0] &= ~(0xF << 8);
 	SYSCFG->EXTICR[0] |= (0x1 << 8);  // Set EXTI2 to Port B
